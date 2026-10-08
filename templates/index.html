@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Newsletter</title>
+
+    <style>
+
+        /* =========================
+           RÉGLAGES GÉNÉRAUX
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f7e5;
+            color: #222222;
+        }
+        
+        <script>
+    const formulaire = document.getElementById("loginForm");
+
+    formulaire.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        console.log("E-mail :", email);
+        console.log("Mot de passe saisi :", password.length > 0);
+
+    });
+</script>
+
+
+        /* =========================
+           CONTENEUR PRINCIPAL
+        ========================= */
+
+        .newsletter {
+            width: 600px;
+            max-width: 90%;
+            margin: 60px auto;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            padding: 45px 40px;
+            text-align: center;
+            background: #111111;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+
+
+        /* =========================
+           CONTENU
+        ========================= */
+
+        .content {
+            padding: 40px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666666;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           IMAGE
+        ========================= */
+
+        .image {
+            width: 100%;
+            height: 220px;
+            background: #dddddd;
+            border-radius: 12px;
+            margin-bottom: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #888888;
+            font-size: 18px;
+        }
+        .form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #111111;
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+}
+
+
+        /* =========================
+           BOUTON
+        ========================= */
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+
+            background: #111111;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #333333;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            padding: 25px 40px;
+            text-align: center;
+
+            background: #f5f5f5;
+
+            color: #888888;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           VERSION MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .newsletter {
+                margin: 20px auto;
+            }
+
+            .header {
+                padding: 35px 25px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="newsletter">
+
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>Profiter de -10%</h1>
+
+            <p>Les dernières actualités directement dans votre boîte mail.</p>
+
+        </div>
+
+
+        <!-- CONTENU -->
+
+        <div class="content">
+
+            <h2>Une offre a pas raté !</h2>
+
+            <p>
+                Une offre valable pour une première inscription
+            </p>
+
+
+            <!-- IMAGE -->
+
+            <div class="image">
+                Votre image ici
+            </div>
+
+
+            <!-- BOUTON -->
+
+           <form id="loginForm">
+
+    <div class="form-group">
+        <label for="email">Adresse e-mail</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="password">Mot de passe</label>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="mot de passe"
+            required
+        >
+    </div>
+
+    <button type="submit" class="button">
+        S'inscrire
+    </button>
+
+</form>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <p>
+                Vous recevez cet email car vous êtes inscrit à notre newsletter.
+            </p>
+
+            <p>
+                © 2026 "marque"
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
